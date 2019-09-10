@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 1000 600" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;">
+    <g id="British" transform="matrix(0.837776,0,0,1.01219,-5.3313,-6.69231)">
+        <rect x="0" y="0" width="1200" height="600" style="fill:rgb(0,36,125);fill-rule:nonzero;"/>
+        <path d="M0,0L1200,600M1200,0L0,600" style="fill-rule:nonzero;stroke:white;stroke-width:120px;"/>
+        <clipPath id="_clip1">
+            <path d="M600,300L1200,300L1200,600L600,300Z"/>
+        </clipPath>
+        <g clip-path="url(#_clip1)">
+            <path d="M0,0L1200,600M1200,0L0,600" style="fill-rule:nonzero;stroke:rgb(207,20,43);stroke-width:80px;"/>
+        </g>
+        <g transform="matrix(1,0,0,-1,0,555)">
+            <clipPath id="_clip2">
+                <path d="M600,300L1200,300L1200,600L600,300Z"/>
+            </clipPath>
+            <g clip-path="url(#_clip2)">
+                <path d="M0,0L1200,600M1200,0L0,600" style="fill-rule:nonzero;stroke:rgb(207,20,43);stroke-width:80px;"/>
+            </g>
+        </g>
+        <g transform="matrix(1,0,0,1,-713,-312)">
+            <clipPath id="_clip3">
+                <path d="M600,300L1200,300L1200,600L600,300Z"/>
+            </clipPath>
+            <g clip-path="url(#_clip3)">
+                <path d="M0,0L1200,600M1200,0L0,600" style="fill-rule:nonzero;stroke:rgb(207,20,43);stroke-width:80px;"/>
+            </g>
+        </g>
+        <g transform="matrix(-1,0,0,1,1187,51)">
+            <clipPath id="_clip4">
+                <path d="M600,300L1200,300L1200,600L600,300Z"/>
+            </clipPath>
+            <g clip-path="url(#_clip4)">
+                <path d="M0,0L1200,600M1200,0L0,600" style="fill-rule:nonzero;stroke:rgb(207,20,43);stroke-width:80px;"/>
+            </g>
+        </g>
+        <path d="M600,0L600,600M0,300L1200,300" style="fill-rule:nonzero;stroke:white;stroke-width:200px;"/>
+        <path d="M600,0L600,600M0,300L1200,300" style="fill-rule:nonzero;stroke:rgb(207,20,43);stroke-width:120px;"/>
+    </g>
+</svg>

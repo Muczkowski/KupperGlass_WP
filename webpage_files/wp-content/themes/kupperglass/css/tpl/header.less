@@ -1,0 +1,218 @@
+// 	Desktop
+header#desktop {
+	-webkit-transition: transform linear 0.3s;
+	transition: transform linear 0.3s;
+	-webkit-transform: translateY(0%);
+	-ms-transform: translateY(0%);
+	transform: translateY(0%);
+	-webkit-transform:translate3d(0,0,0);
+	transform:translate3d(0,0,0);
+	will-change: transform;
+	display: none;
+	
+	@media (min-width: @m-breakpoint) {
+		display: block;
+	}
+		
+	// Dekstop :: Logo
+	div.logo {
+		a.logo {
+			height: 100%;
+		}
+	}
+		
+	// Dekstop :: Navigation
+	#nav {
+		// Header :: Logo
+		div.logo {
+			width-width: 100%;
+			max-height: 100%;
+			position: relative;
+		
+			a.logo {
+				height: 100%;
+				
+				img.logo {
+					height: @nav-logo-height;
+					transition: height 0.3s linear;
+					-webkit-transition: height 0.3s linear;
+				}
+			}
+		}
+	}
+	
+	// Dekstop :: Nav shrinking (if enabled)
+	&.small {
+		#nav {
+			position: relative;
+			height: @nav-smaller-height;
+		}
+	}
+}
+
+// Navigation
+#nav {
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		
+		li {
+			margin: 0;
+			padding: 0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+	
+		// Navigation :: Menu
+		&.menu {			
+			li {
+				a {
+					text-decoration: none;
+				}
+			}
+			
+			// Navigation :: DroppedDown
+			ul {
+				position: absolute;
+				top: @nav-height;
+				left: 0;
+				width: auto;
+				height: auto;
+				z-index: 9999;
+				display: block;
+				opacity: 0;
+				visibility: hidden;
+				transition: visibility .25s, opacity .25s ease-in-out;
+				-webkit-transition: visibility .25s, opacity .25s ease-in-out;
+				
+				&:hover {
+					opacity: 1;
+					visibility: visible;
+				}
+				
+				li {
+					display: block;
+					clear: both;
+					height: auto;
+					padding: 0 10px;
+				
+					&:last-of-type {
+						border-bottom: 0 solid rgba(0,0,0,0.1);	
+					}
+						
+					a {
+						width: auto;
+						color: @text-color;
+					}
+					
+					&.current > a, &:hover > a {
+						color: @text-s-color;
+					}
+				}
+			}
+		}
+	}
+	
+	// Fixed menu (if enabled)
+	&.fixed {
+		transition: height 0.3s linear;
+		-webkit-transition: height 0.3s linear;
+		will-change: height;
+		transform: translate3d(0,0,0);
+		-webkit-transform: translate3d(0,0,0);
+		position: fixed;
+		top: 0;
+		left: 0;
+		
+		div.logo {		
+			a.logo {				
+				img.logo {
+					height: @nav-logo-height;
+					transition: height 0.3s linear;
+					-webkit-transition: height 0.3s linear;
+				}
+			}
+		}
+	}
+		
+	// Flex smart styling for ul elements
+	.flex {
+		display: flex;
+		justify-content: space-around;
+		
+		li {
+			flex: 1;
+		}
+	}
+}
+
+// Mobile
+header#mobile {
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: @m-nav-height;
+	background: @m-nav-bg;
+	z-index: 99;
+	display: none;
+	
+	@media (max-width: @m-breakpoint) {
+		display: block;
+	}
+	
+	// Mobile :: Logo
+	img.logo {
+		position: absolute;
+		left: 0;
+		right: 0;
+		margin: auto;
+		display: block;
+		height: 100%;
+		padding: 5px 0;
+	}
+	
+	// Mobile :: Hamburger
+	a.m_menu {
+		width: 20px;
+		height: @m-hamb-weight;
+		border-radius: 2px;
+		position: absolute;
+		left: @m-hamb-pos-left;
+		right: @m-hamb-pos-right;
+		top: 0;
+		bottom: 0;
+		margin: auto;
+		background: @m-hamb-color;
+		
+		&:before {
+			content: '';
+			width: 20px;
+			height: @m-hamb-weight;
+			border-radius: 2px;
+			position: absolute;
+			left: @m-hamb-pos-left;
+			right: @m-hamb-pos-right;
+			top: -15px;
+			bottom: 0;
+			margin: auto;
+			background: @m-hamb-color;
+		}
+		
+		&:after {
+			content: '';
+			width: 20px;
+			height: @m-hamb-weight;
+			border-radius: 2px;
+			position: absolute;
+			left: @m-hamb-pos-left;
+			right: @m-hamb-pos-right;
+			top: 15px;
+			bottom: 0;
+			margin: auto;
+			background: @m-hamb-color;
+		}
+	}
+}

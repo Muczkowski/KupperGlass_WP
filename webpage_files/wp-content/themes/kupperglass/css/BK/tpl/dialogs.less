@@ -1,0 +1,112 @@
+/* -------------------------------------------------------------------------- *\
+ * Necessary styling for the dialog to work
+ * -------------------------------------------------------------------------- */
+
+/**
+ * When `<dialog>` is properly supported, the overlay is implied and can be
+ * styled with `::backdrop`, which means the DOM one should be removed.
+ */
+ 
+[data-a11y-dialog-native] .dialog-overlay {
+  display: none;
+}
+
+/**
+ * When `<dialog>` is not supported, its default display is `inline` which can
+ * cause layout issues.
+ */
+
+.dialog[aria-hidden="true"] {
+  display: none;
+}
+
+dialog[open] {
+  display: block;
+}
+
+/* -------------------------------------------------------------------------- *\
+ * Styling to make the dialog look like a dialog
+ * -------------------------------------------------------------------------- */
+
+.dialog-overlay {
+  z-index: 3;
+  background-color: rgba(0, 0, 0, 0.66);
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.66);
+}
+
+.dialog-content {
+  background-color: rgb(255, 255, 255);
+  z-index: 3;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  transition: all .3s ease;
+  -webkit-transition: all .3s ease;
+  margin: 0;
+}
+
+/* -------------------------------------------------------------------------- *\
+ * Extra dialog styling to make it shiny
+ * -------------------------------------------------------------------------- */
+
+.dialog:not([aria-hidden='true']) > .dialog-overlay {
+	-webkit-animation: fade-in 200ms 1 both;
+	animation: fade-in 200ms 1 both;
+}
+
+.dialog:not([aria-hidden='true']) > .dialog-content {
+	-webkit-animation: appear 400ms 150ms 1 both;
+	animation: appear 400ms 150ms 1 both;
+}
+
+@keyframes appear {
+	from { 
+		
+		-webkit-transform: translate(-50%, -50%);
+		transform: translate(-50%, -40%); 
+		opacity: 0; 
+	}
+	
+	to { 
+		-webkit-transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%); 
+		opacity: 1; 
+	}
+}
+
+@keyframes fade-in {
+	from { 
+		opacity: 0;
+	}
+	
+	to { 
+		opacity: 1;
+	}
+}
+
+.dialog-content {
+	max-width: calc(~"90% - 40px");
+	width: 600px;
+	border-radius: 2px;
+	
+	padding: 20px;
+}
+
+.dialog-overlay {
+  background-color: @dialog-bg;
+}
+
+.dialog-close {
+	.dialog-close();
+}

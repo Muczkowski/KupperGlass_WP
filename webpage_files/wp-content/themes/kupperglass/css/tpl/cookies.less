@@ -1,0 +1,33 @@
+.cbcookies {
+	background: @ck-bg;
+	width: 100%;
+	z-index: 99;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	transition: transform .3s ease;
+	-webkit-transition: transform .3s ease;
+	transform: translateY(0%);
+	-webkit-transform: translateY(0%);
+				
+	&.hidden {
+		transform: translateY(110%);
+	}
+	
+	&#cbcookies-top {
+		position: fixed;
+	    top: 0;
+	    left: 0;
+	}
+	
+	p {
+		color: @ck-color;
+		vertical-align: middle;
+		margin: 0;
+		padding: 0;
+	}
+	
+	p, a {
+		display: inline-block;
+	}
+}

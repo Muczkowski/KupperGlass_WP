@@ -1,0 +1,305 @@
+// 	Grid created by Salamander Studio (Karol Salamądry)
+
+.grid {
+	position: relative;
+	width: 100%;
+	display: block;
+	clear: both;
+	
+	&::after {
+		display: block;
+		content: '';
+		clear: both;
+	}
+	
+	.cell {
+		position: relative;
+		vertical-align: top;
+		float: left;
+	}
+	
+	&.one .cell {
+		width: 100%;
+	}
+	
+	&.two .cell {
+		width: calc(~"50% -" @grid-gutter);
+		
+		&:nth-child(odd) {
+			margin-right: @grid-gutter;
+			
+			@media (max-width: 300px) {
+				width: 100%;
+				margin: 0;
+			}
+		}
+		
+		&:nth-child(even) {
+			margin-left: @grid-gutter;
+			
+			@media (max-width: 300px) {
+				width: 100%;
+				margin: 0;
+			}
+		}
+		
+	}
+	
+	&.three {
+		.cell {
+			width: 100% / 3;
+			
+			>div {
+				width: calc(~"100%" - @grid-gutter);
+			}
+			
+			@media (min-width: 601px) {
+				&:nth-of-type(3n - 2) {
+					>div {
+						margin-right: @grid-gutter;
+					}
+				}
+				
+				&:nth-of-type(3n - 1) {
+					>div {
+						margin: 0 auto;
+					}
+				}
+				
+				&:nth-of-type(3n) {
+					>div {
+						margin-left: @grid-gutter;
+					}
+				}
+			}
+		
+			@media (max-width: 600px) {
+				width: 100% / 2;
+				
+				&:nth-child(odd) {
+					>div {
+						margin-right: @grid-gutter;
+					}
+				}
+				
+				&:nth-child(even) {
+					>div {
+						margin-left: @grid-gutter;
+					}
+				}
+			}
+				
+			@media (max-width: 300px) {
+				width: 100%;
+			
+				>div {
+					width: 100%;
+					margin: 0;
+				}
+			}
+		}
+		
+		&.rwd-mini {
+			.cell {
+				@media (min-width: 301px) and (max-width: 600px) {
+					width: 100%;
+			
+					>div {
+						width: 100%;
+						margin: 0;
+					}
+				}
+			}
+		}
+	}
+	
+	&.four .cell {
+		width: 25%;
+		
+		>div {
+			width: calc(~"100%" - @grid-gutter);
+			margin: 0 auto;
+		}
+		
+		@media (min-width: 601px) {
+			&:nth-of-type(4n - 3) {
+				>div {
+					margin-left: 0;
+					margin-right: @grid-gutter;
+				}
+			}
+			
+			&:nth-of-type(4n - 2) {
+				>div {
+					margin-right: 0;
+					margin-left: (@grid-gutter /3);
+				}
+			}
+			
+			&:nth-of-type(4n - 1) {
+				>div {
+					margin-right: 0;
+					margin-left: (@grid-gutter/1.5);
+				}
+			}
+			
+			&:nth-of-type(4n) {
+				>div {
+					margin-right: 0;
+					margin-left: @grid-gutter;
+				}
+			}
+		}
+	
+		@media (min-width: 301px) and (max-width: 600px) {
+			width: 50%;
+			
+			&:nth-child(odd) {
+				>div {
+					margin-right: @grid-gutter;
+				}
+			}
+			
+			&:nth-child(even) {
+				>div {
+					margin-left: @grid-gutter;
+				}
+			}
+		}
+			
+		@media (max-width: 300px) {
+			width: 100%;
+		
+			>div {
+				width: 100%;
+			}
+		}
+	}
+	
+	&.five .cell {
+		width: 20%;
+		
+		>div {
+			width: calc(~"100%" - @grid-gutter);
+			margin: 0 auto;
+		}
+		
+		@media (min-width: 601px) {
+			&:nth-of-type(5n - 4) {
+				>div {
+					margin-left: 0;
+					margin-right: @grid-gutter;
+				}
+			}
+			
+			&:nth-of-type(5n - 3) {
+				>div {
+					margin-right: 0;
+					margin-left: (@grid-gutter /3);
+				}
+			}
+			
+			&:nth-of-type(5n - 1) {
+				>div {
+					margin-right: 0;
+					margin-left: (@grid-gutter/1.5);
+				}
+			}
+			
+			&:nth-of-type(5n) {
+				>div {
+					margin-right: 0;
+					margin-left: @grid-gutter;
+				}
+			}
+		}
+	
+		@media (min-width: 301px) and (max-width: 600px) {
+			width: 50%;
+			
+			&:nth-child(odd) {
+				>div {
+					margin-right: @grid-gutter;
+				}
+			}
+			
+			&:nth-child(even) {
+				>div {
+					margin-left: @grid-gutter;
+				}
+			}
+		}
+			
+		@media (max-width: 300px) {
+			width: 100%;
+		
+			>div {
+				width: 100%;
+			}
+		}
+	}
+	
+	
+	&.six .cell {
+		width: 100% / 6;
+		
+		>div {
+			width: calc(~"100%" - @grid-gutter);
+			margin: 0 auto;
+		}
+		
+		@media (min-width: 601px) {
+			&:nth-of-type(6n - 5) {
+				>div {
+					margin-left: 0;
+					margin-right: @grid-gutter;
+				}
+			}
+			
+			&:nth-of-type(6n - 4), &:nth-of-type(6n - 3) {
+				>div {
+					margin-right: 0;
+					margin-left: (@grid-gutter /3);
+				}
+			}
+			
+			&:nth-of-type(6n - 1), &:nth-of-type(6n - 2) {
+				>div {
+					margin-right: 0;
+					margin-left: (@grid-gutter/1.5);
+				}
+			}
+			
+			&:nth-of-type(6n) {
+				>div {
+					margin-right: 0;
+					margin-left: @grid-gutter;
+				}
+			}
+		}
+	
+		@media (min-width: 301px) and (max-width: 600px) {
+			width: 50%;
+			
+			&:nth-child(odd) {
+				>div {
+					margin-right: @grid-gutter;
+				}
+			}
+			
+			&:nth-child(even) {
+				>div {
+					margin-left: @grid-gutter;
+				}
+			}
+		}
+			
+		@media (max-width: 300px) {
+			width: 100%;
+		
+			>div {
+				width: 100%;
+			}
+		}
+	}
+}

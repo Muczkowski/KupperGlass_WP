@@ -1,0 +1,49 @@
+footer {
+	padding: @section-padding;
+	background: @ft-bg;
+	
+	.wrapper {
+		ul {
+			margin: 0;
+			padding: 0;
+			
+			&.icons {
+				li {
+					display: inline-block;
+					vertical-align: middle;
+				}
+			}
+			
+			li {
+				display: block;
+				margin: 0;
+			}
+		}
+			
+		a, p {
+			font-size: @ft-font-size;
+			line-height: @ft-line-height;
+			display: block;
+			color: @ft-text-color;
+			padding: 1px 0;
+			margin: 0;
+		}
+		
+		a {
+			color: @ft-href-color;
+		}
+		
+		h6 {
+			font-size: 1.2em;
+			margin: 10px 0;
+			color: @ft-h6-color;
+		}
+		
+		svg {
+			path {
+				fill: @ft-href-color !important;
+			}
+		}
+	}
+}
+
