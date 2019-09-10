@@ -1,2 +1,1 @@
-# KupperGlass_WP
-KupperGlass - 1# Projekt WebsiteStyle
+# TO JEST README
