@@ -22,6 +22,6 @@ System CMS został zaopatrzony w ACF oraz Theme Options i Contact Form 7. Wszyst
 
 ## Kontakt z wykonawcą
 
-Karol Salamądry
-Tel: 500-011-544
-Mail: salamadry.karol@gmail.com
+Karol Salamądry,
+tel: 500-011-544,
+mail: salamadry.karol@gmail.com
